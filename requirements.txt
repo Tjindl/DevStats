@@ -1,0 +1,18 @@
+# Core
+fastapi
+uvicorn[standard]
+pydantic-settings
+sqlalchemy
+greenlet # Required for async sqlalchemy
+asyncpg
+alembic
+
+# Auth & HTTP
+httpx
+python-jose[cryptography]
+passlib[bcrypt]
+cryptography
+
+# Dev
+pytest
+pytest-asyncio
