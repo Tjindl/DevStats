@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.api.routes import auth, users, score
+from app.api.routes import auth, health, score, users
 
 app = FastAPI(
     title="DevStats",
@@ -9,12 +9,7 @@ app = FastAPI(
 )
 
 
-# Health Check
-@app.get("/health", tags=["Health"])
-async def health_check():
-    return {"status": "ok"}
-
-
+app.include_router(health.router)
 app.include_router(auth.router)
 app.include_router(users.router)
 app.include_router(score.router)
