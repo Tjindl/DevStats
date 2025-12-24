@@ -1,14 +1,12 @@
 from datetime import datetime
-from typing import Iterable
-
-from sqlalchemy import select
-from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.security import decrypt_token
 from app.integrations.github_client import GithubClient
 from app.models.pull_request import PullRequest
 from app.models.user import User
 from app.services.scoring_service import apply_score
+from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
 
 
 def _parse_dt(value: str | None) -> datetime | None:
@@ -47,8 +45,10 @@ async def sync_pull_requests(
         if github_pr_id is None:
             continue
 
-        repo_full_name = pr_data.get("base", {}).get("repo", {}).get("full_name") or ""
-        repo_owner = pr_data.get("base", {}).get("repo", {}).get("owner", {}).get("login") or ""
+        repo_full_name = pr_data.get("base", {}).get("repo",
+                                                     {}).get("full_name") or ""
+        repo_owner = (pr_data.get("base", {}).get("repo", {}).get(
+            "owner", {}).get("login") or "")
         merged_at = _parse_dt(pr_data.get("merged_at"))
         additions = pr_data.get("additions") or 0
         deletions = pr_data.get("deletions") or 0

@@ -1,4 +1,4 @@
-.PHONY: help up down logs install migrate run setup
+.PHONY: help up down logs install migrate run setup activate
 
 # Variables
 # Detect OS and set VENV_BIN
@@ -23,6 +23,10 @@ help:
 	@echo "  make migrate  - Run database migrations"
 	@echo "  make run      - Start the backend server"
 	@echo "  make setup    - Full setup (install deps, start DB, migrate)"
+	@echo "  make activate - Show command to activate venv"
+
+activate:
+	@echo "source $(VENV_BIN)/activate"
 
 up:
 	$(DOCKER_COMPOSE) up -d

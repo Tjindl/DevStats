@@ -1,11 +1,10 @@
 import uuid
 from datetime import datetime, timezone
 
+from app.db.base import Base
 from sqlalchemy import BigInteger, DateTime, String, Text
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-
-from app.db.base import Base
 
 
 class User(Base):
@@ -15,7 +14,6 @@ class User(Base):
         UUID(as_uuid=True),
         primary_key=True,
         default=uuid.uuid4,
-
     )
 
     github_id: Mapped[int] = mapped_column(

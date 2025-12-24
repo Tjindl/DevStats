@@ -1,18 +1,10 @@
 import uuid
 from datetime import datetime
 
-from sqlalchemy import (
-    BigInteger,
-    Boolean,
-    DateTime,
-    ForeignKey,
-    Integer,
-    String,
-)
-from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy.orm import relationship, Mapped, mapped_column
-
 from app.db.base import Base
+from sqlalchemy import (BigInteger, Boolean, DateTime, ForeignKey, Integer,
+                        String)
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 
 class PullRequest(Base):

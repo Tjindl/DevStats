@@ -1,8 +1,7 @@
 from datetime import datetime, timedelta
-from typing import Any, Iterable
+from typing import Any
 
 import httpx
-
 from app.core.config import settings
 
 
@@ -35,8 +34,9 @@ class GithubClient:
             resp.raise_for_status()
             payload = resp.json()
             if "error" in payload:
-                raise RuntimeError(payload.get("error_description") or "OAuth error")
-            return payload["access_token"]
+                raise RuntimeError(
+                    payload.get("error_description") or "OAuth error")
+            return str(payload["access_token"])
 
     def _headers(self) -> dict[str, str]:
         headers = {
@@ -49,9 +49,11 @@ class GithubClient:
 
     async def get_user(self) -> dict[str, Any]:
         async with httpx.AsyncClient() as client:
-            resp = await client.get(f"{self.api_base}/user", headers=self._headers(), timeout=20.0)
+            resp = await client.get(f"{self.api_base}/user",
+                                    headers=self._headers(),
+                                    timeout=20.0)
             resp.raise_for_status()
-            return resp.json()
+            return dict(resp.json())
 
     async def fetch_recent_pull_requests(
         self,
@@ -62,7 +64,8 @@ class GithubClient:
         """
         Fetch recent pull requests for a user using search + detail calls.
         """
-        since_date = (datetime.utcnow() - timedelta(days=days)).date().isoformat()
+        since_date = (datetime.utcnow() -
+                      timedelta(days=days)).date().isoformat()
         query = f"is:pr author:{username} created:>={since_date}"
         per_page = min(max(limit, 1), 30)
 
@@ -70,7 +73,12 @@ class GithubClient:
             search_resp = await client.get(
                 f"{self.api_base}/search/issues",
                 headers=self._headers(),
-                params={"q": query, "per_page": per_page, "sort": "updated", "order": "desc"},
+                params={
+                    "q": query,
+                    "per_page": per_page,
+                    "sort": "updated",
+                    "order": "desc",
+                },
                 timeout=30.0,
             )
             search_resp.raise_for_status()
@@ -82,7 +90,9 @@ class GithubClient:
                 pr_url = item.get("pull_request", {}).get("url")
                 if not pr_url:
                     continue
-                pr_resp = await client.get(pr_url, headers=self._headers(), timeout=20.0)
+                pr_resp = await client.get(pr_url,
+                                           headers=self._headers(),
+                                           timeout=20.0)
                 if pr_resp.status_code != 200:
                     continue
                 detail_prs.append(pr_resp.json())
