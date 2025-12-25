@@ -10,6 +10,7 @@ httpx
 passlib[bcrypt]
 pre-commit
 pydantic-settings
+PyGithub==2.8.1
 
 # Dev
 pytest
