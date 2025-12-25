@@ -37,6 +37,13 @@ class GitHubService:
         pr_list: list[PullRequestInfo] = []
         for repo in user.get_repos():
             # only check repo named "incubyte"
+
+            # change name to any repo  because its taking time
+            # to scan for large  repos
+
+            # TODO check if we can pass head in  get_pulls to filter by
+            # head repo so that it takes less time most probably head
+            #  would we the name of user branch
             if repo.name.lower() != "incubyte":
                 continue
             if not repo.fork:
