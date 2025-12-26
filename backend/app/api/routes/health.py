@@ -1,9 +1,11 @@
 import shutil
 import subprocess
 from pathlib import Path
+
 from fastapi import APIRouter
 
 router = APIRouter(tags=["Health"])
+
 
 def get_git_commit_sha() -> str:
     repo_root = Path(__file__).resolve().parents[4]
@@ -14,7 +16,7 @@ def get_git_commit_sha() -> str:
                 [git_bin, "describe", "--tags", "--always"],
                 cwd=repo_root,
                 capture_output=True,
-                text=True
+                text=True,
             )
             if result.returncode == 0 and result.stdout.strip():
                 return result.stdout.strip()
@@ -24,7 +26,8 @@ def get_git_commit_sha() -> str:
     try:
         git_path = repo_root / ".git"
         if git_path.is_file():
-            git_dir = (repo_root / git_path.read_text().strip().split(":", 1)[1].strip()).resolve()
+            git_dir = (repo_root / git_path.read_text().strip().split(
+                ":", 1)[1].strip()).resolve()
         else:
             git_dir = git_path
 
@@ -36,7 +39,7 @@ def get_git_commit_sha() -> str:
                 ref_file = git_dir / ref
                 if ref_file.exists():
                     return ref_file.read_text().strip()
-                
+
                 packed_refs = git_dir / "packed-refs"
                 if packed_refs.exists():
                     for line in packed_refs.read_text().splitlines():
@@ -50,9 +53,7 @@ def get_git_commit_sha() -> str:
 
     return "unknown"
 
+
 @router.get("/health")
 async def health_check():
-    return {
-        "status": " DEVSTASTS RUNNING ",
-        "commit_id": get_git_commit_sha()
-    }
+    return {"status": " DEVSTASTS RUNNING ", "commit_id": get_git_commit_sha()}

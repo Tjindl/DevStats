@@ -1,18 +1,21 @@
+alembic
+asyncpg
+cryptography
 # Core
 fastapi
-uvicorn[standard]
-pydantic-settings
-sqlalchemy
 greenlet # Required for async sqlalchemy
-asyncpg
-alembic
 
 # Auth & HTTP
 httpx
-python-jose[cryptography]
 passlib[bcrypt]
-cryptography
+pre-commit
+pydantic-settings
+PyGithub==2.8.1
 
 # Dev
 pytest
 pytest-asyncio
+pytest\npytest-asyncio\npytest-cov\nhttpx
+python-jose[cryptography]
+sqlalchemy
+uvicorn[standard]

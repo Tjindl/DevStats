@@ -1,20 +1,20 @@
 import asyncio
 import sys
-from pathlib import Path
 from logging.config import fileConfig
-
-from sqlalchemy import pool
-from sqlalchemy.engine import Connection
-from sqlalchemy.ext.asyncio import async_engine_from_config
-
-from alembic import context
+from pathlib import Path
 
 # Add project root to sys.path BEFORE importing app modules
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
-from app.core.config import settings
-from app.db.base import Base
-from app.models import user, pull_request  # IMPORTANT: import models
+# IMPORTANT: Import models to register them with Base.metadata
+import app.models.pull_request  # noqa: F401, E402
+import app.models.user  # noqa: F401, E402
+from alembic import context  # noqa: E402
+from app.core.config import settings  # noqa: E402
+from app.db.base import Base  # noqa: E402
+from sqlalchemy import pool  # noqa: E402
+from sqlalchemy.engine import Connection  # noqa: E402
+from sqlalchemy.ext.asyncio import async_engine_from_config  # noqa: E402
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -30,7 +30,6 @@ if config.config_file_name is not None:
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 target_metadata = Base.metadata
-
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
@@ -88,7 +87,6 @@ def run_migrations_online() -> None:
         await connectable.dispose()
 
     asyncio.run(run_async_migrations())
-
 
 
 if context.is_offline_mode():

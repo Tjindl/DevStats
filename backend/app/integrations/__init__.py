@@ -1,3 +1,3 @@
-from app.integrations.github_client import GithubClient
+from .github import GitHubService
 
-__all__ = ["GithubClient"]
+__all__ = ["GitHubService"]

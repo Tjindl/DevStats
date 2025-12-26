@@ -1,6 +1,5 @@
-from pydantic import BaseModel, Field
-
 from app.schemas.pull_request import PullRequestOut
+from pydantic import BaseModel, Field
 
 
 class ScoreRequest(BaseModel):

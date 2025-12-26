@@ -1,6 +1,5 @@
-from pydantic import BaseModel
-
 from app.schemas.user import UserOut
+from pydantic import BaseModel
 
 
 class LoginResponse(BaseModel):
