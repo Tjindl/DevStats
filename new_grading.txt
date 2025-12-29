@@ -1,0 +1,24 @@
+PR scoring parameter explanations:
+
+lines_added: Number of lines of code added in the PR — indicates implementation size or feature work.
+lines_removed: Number of lines removed in the PR — often signals refactor, cleanup, or simplification.
+files_changed: Count of files modified in the PR — measures breadth and potential impact/risk.
+commits: Number of commits in the PR — shows iteration; many small commits can be good, too many messy commits may be negative.
+tests_added: Number of test cases or test files added with the PR — positive quality signal (unit/integration/other tests added).
+review_comments: Number of review comments on the PR — higher counts often indicate issues or required rework (treated as a negative signal).
+approvals: Number of reviewer approvals — positive signal showing peer review acceptance.
+merge_time_days: Time in days from PR open to merge/close — shorter times usually indicate smoother reviews and integration.
+
+Repo-level / aggregation parameters:
+
+pr_count: Total PRs by the author (in the evaluated window) — activity volume.
+commits_per_pr: Average commits per PR — workflow granularity indicator.
+avg_merge_time_days: Average merge time across PRs — overall review/merge speed.
+repo_stars: Repository star count — proxy for project visibility/popularity.
+repo_forks: Repository fork count — proxy for community adoption and contribution interest.
+
+Outputs:
+
+avg_pr_score: Average per-PR score (0-100) computed from PR metrics.
+repo_level_score: Score (0-100) computed from repo-level metrics.
+final_score: Aggregated final score (0-100) combining avg_pr_score and repo_level_score.

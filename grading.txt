@@ -1,7 +1,7 @@
 open source
 -- no of prs
 ----no of commits per pr
--------merge time
+------- avg merge time
 ---------stars of repo(in which contributed)
 -----------no of forks of repo
 
