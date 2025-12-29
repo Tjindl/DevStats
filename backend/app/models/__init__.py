@@ -1,4 +1,3 @@
-from app.models.pull_request import PullRequest
-from app.models.user import User
+from .pull_request import PullRequest
 
-__all__ = ["User", "PullRequest"]
+__all__ = ["PullRequest"]
