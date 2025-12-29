@@ -1,0 +1,893 @@
+[
+  {
+    "body": "Added a warning about using the website in production.",
+    "created_at": "2025-11-22T18:39:45+00:00",
+    "merged": true,
+    "pr_number": 8,
+    "repo": "viditchess64/solana-connect-chat",
+    "state": "merged",
+    "title": "Add warning for production use of the website"
+  },
+  {
+    "body": "",
+    "created_at": "2025-11-22T18:17:59+00:00",
+    "merged": true,
+    "pr_number": 6,
+    "repo": "viditchess64/solana-connect-chat",
+    "state": "merged",
+    "title": "Update Solana network URL to Helius RPC"
+  },
+  {
+    "body": "",
+    "created_at": "2025-11-22T18:17:14+00:00",
+    "merged": true,
+    "pr_number": 5,
+    "repo": "viditchess64/solana-connect-chat",
+    "state": "merged",
+    "title": "Update BookingFlow.tsx"
+  },
+  {
+    "body": "",
+    "created_at": "2025-11-22T18:08:59+00:00",
+    "merged": true,
+    "pr_number": 4,
+    "repo": "viditchess64/solana-connect-chat",
+    "state": "merged",
+    "title": "Update SolanaWalletProvider.tsx"
+  },
+  {
+    "body": "",
+    "created_at": "2025-11-22T18:07:28+00:00",
+    "merged": true,
+    "pr_number": 3,
+    "repo": "viditchess64/solana-connect-chat",
+    "state": "merged",
+    "title": "Update BookingFlow.tsx"
+  },
+  {
+    "body": "",
+    "created_at": "2025-11-22T18:05:16+00:00",
+    "merged": true,
+    "pr_number": 1,
+    "repo": "viditchess64/solana-connect-chat",
+    "state": "merged",
+    "title": "Update Admin.tsx"
+  },
+  {
+    "body": "",
+    "created_at": "2025-09-10T12:39:17+00:00",
+    "merged": true,
+    "pr_number": 2,
+    "repo": "Divyansh2903/Billing_system",
+    "state": "merged",
+    "title": "added migration"
+  },
+  {
+    "body": "",
+    "created_at": "2025-09-10T12:32:06+00:00",
+    "merged": true,
+    "pr_number": 1,
+    "repo": "Divyansh2903/Billing_system",
+    "state": "merged",
+    "title": "Update schema.prisma"
+  },
+  {
+    "body": "",
+    "created_at": "2025-07-28T14:16:48+00:00",
+    "merged": false,
+    "pr_number": 3791,
+    "repo": "solana-foundation/anchor",
+    "state": "closed",
+    "title": "Added fn call"
+  },
+  {
+    "body": "Added `streamCallbacks` as an optional argument to `generateContentStream`. \r\nThis would allow users to not deal with node.js streams and simply get back the text response in callbacks.\r\n\r\n```js\r\n   await model.generateContentStream(\"What is 2 + 2\", {}, {\r\n       onData(chunk: string) => console.log(chunk),\r\n      onDone(fullText: string) => console.log(fullText)\r\n   });\r\n\r\n```",
+    "created_at": "2025-03-06T13:15:41+00:00",
+    "merged": false,
+    "pr_number": 371,
+    "repo": "google-gemini/deprecated-generative-ai-js",
+    "state": "open",
+    "title": "Adds streamCallbacks as an optional argument. Fixes #322"
+  },
+  {
+    "body": "### PR Fixes:\r\n- 1\r\n- 2\r\n\r\nResolves #[Issue Number if there] \r\n\r\n### Checklist before requesting a review\r\n- [ ] I have performed a self-review of my code\r\n- [ ] I assure there is no similar/duplicate pull request regarding same issue\r\n",
+    "created_at": "2024-12-05T12:41:37+00:00",
+    "merged": true,
+    "pr_number": 1610,
+    "repo": "code100x/cms",
+    "state": "merged",
+    "title": "merge to prod"
+  },
+  {
+    "body": "Built on top of https://github.com/code100x/daily-code/pull/532",
+    "created_at": "2024-08-26T15:59:57+00:00",
+    "merged": true,
+    "pr_number": 572,
+    "repo": "code100x/daily-code",
+    "state": "merged",
+    "title": "ui changes"
+  },
+  {
+    "body": "Forked out of https://github.com/code100x/cms/pull/907\r\n\r\nAdded some changes on top of it",
+    "created_at": "2024-08-20T05:46:04+00:00",
+    "merged": true,
+    "pr_number": 920,
+    "repo": "code100x/cms",
+    "state": "merged",
+    "title": "feat(header): implement new design as per issue #888 "
+  },
+  {
+    "body": "Also does a bunch of cleanup\r\nSpecifically, `findContentById` did not explicitly tell if it was returning a `folder` or a `content like video/notion doc`\r\nThis PR fixes that by making the return type explicity.\r\n\r\nAnd since this function was being used in various places, had to fix that as well.",
+    "created_at": "2024-08-20T04:40:36+00:00",
+    "merged": true,
+    "pr_number": 918,
+    "repo": "code100x/cms",
+    "state": "merged",
+    "title": "Fixes admin dashbaord"
+  },
+  {
+    "body": "<img width=\"1658\" alt=\"Screenshot 2024-06-21 at 2 10 35 PM\" src=\"https://github.com/stack-auth/stack/assets/8079861/af146868-3915-42b4-abb6-334744b45560\">\r\n\r\nThe PR adds a `serverMetadata` and `clientMetadata` field to the user's edit modal.\r\n\r\nFixes https://github.com/stack-auth/stack/issues/69\r\n",
+    "created_at": "2024-06-21T08:51:24+00:00",
+    "merged": true,
+    "pr_number": 87,
+    "repo": "stack-auth/stack-auth",
+    "state": "merged",
+    "title": "Adds server and client side metadata"
+  },
+  {
+    "body": "### PR Fixes:\r\n- 1\r\n- 2\r\n\r\nResolves #[Issue Number if there] \r\n\r\n### Checklist before requesting a review\r\n- [ ] I have performed a self-review of my code\r\n- [ ] I assure there is no similar/duplicate pull request regarding same issue\r\n",
+    "created_at": "2024-06-02T23:39:17+00:00",
+    "merged": true,
+    "pr_number": 753,
+    "repo": "code100x/cms",
+    "state": "merged",
+    "title": "Migrated prisma"
+  },
+  {
+    "body": "Removes canvas as a dependency",
+    "created_at": "2024-05-21T21:45:09+00:00",
+    "merged": false,
+    "pr_number": 689,
+    "repo": "code100x/cms",
+    "state": "closed",
+    "title": "gets rid of package"
+  },
+  {
+    "body": "",
+    "created_at": "2024-05-19T19:18:39+00:00",
+    "merged": true,
+    "pr_number": 683,
+    "repo": "code100x/cms",
+    "state": "merged",
+    "title": "fixed bookmarks"
+  },
+  {
+    "body": "",
+    "created_at": "2024-05-19T14:45:44+00:00",
+    "merged": false,
+    "pr_number": 4,
+    "repo": "100xdevs-cohort-2/week-25-integ-e2e-tests",
+    "state": "open",
+    "title": "Update index.ts"
+  },
+  {
+    "body": "",
+    "created_at": "2024-05-19T14:44:19+00:00",
+    "merged": false,
+    "pr_number": 3,
+    "repo": "100xdevs-cohort-2/week-25-integ-e2e-tests",
+    "state": "open",
+    "title": "Update .gitignore"
+  },
+  {
+    "body": "",
+    "created_at": "2024-05-19T10:54:28+00:00",
+    "merged": false,
+    "pr_number": 2,
+    "repo": "100xdevs-cohort-2/week-25-integ-e2e-tests",
+    "state": "closed",
+    "title": "Update .gitignore"
+  },
+  {
+    "body": "",
+    "created_at": "2024-05-19T10:52:41+00:00",
+    "merged": false,
+    "pr_number": 1,
+    "repo": "100xdevs-cohort-2/week-25-integ-e2e-tests",
+    "state": "closed",
+    "title": "Update .gitignore"
+  },
+  {
+    "body": "Reverts code100x/cms#564",
+    "created_at": "2024-05-12T20:30:06+00:00",
+    "merged": true,
+    "pr_number": 578,
+    "repo": "code100x/cms",
+    "state": "merged",
+    "title": "Revert \"update docker file fixing error in 'RUN npm install' caused by canvas package\""
+  },
+  {
+    "body": "",
+    "created_at": "2024-05-12T18:47:22+00:00",
+    "merged": false,
+    "pr_number": 10,
+    "repo": "code100x/bounty-hook",
+    "state": "open",
+    "title": "Update .gitignore"
+  },
+  {
+    "body": "",
+    "created_at": "2024-05-12T10:45:02+00:00",
+    "merged": false,
+    "pr_number": 3,
+    "repo": "100xdevs-cohort-2/week-24-testing",
+    "state": "open",
+    "title": "Update db.ts"
+  },
+  {
+    "body": "",
+    "created_at": "2024-05-12T10:44:21+00:00",
+    "merged": false,
+    "pr_number": 2,
+    "repo": "100xdevs-cohort-2/week-24-testing",
+    "state": "open",
+    "title": "Update index.ts"
+  },
+  {
+    "body": "",
+    "created_at": "2024-05-12T10:41:59+00:00",
+    "merged": false,
+    "pr_number": 1,
+    "repo": "100xdevs-cohort-2/week-24-testing",
+    "state": "closed",
+    "title": "Update index.ts"
+  },
+  {
+    "body": "test",
+    "created_at": "2024-05-07T13:17:27+00:00",
+    "merged": false,
+    "pr_number": 399,
+    "repo": "code100x/daily-code",
+    "state": "closed",
+    "title": "Update README.md"
+  },
+  {
+    "body": "",
+    "created_at": "2024-05-07T13:09:40+00:00",
+    "merged": false,
+    "pr_number": 304,
+    "repo": "code100x/chess",
+    "state": "closed",
+    "title": "Update README.md"
+  },
+  {
+    "body": "testing out bounties",
+    "created_at": "2024-05-07T12:12:48+00:00",
+    "merged": false,
+    "pr_number": 549,
+    "repo": "code100x/cms",
+    "state": "closed",
+    "title": "Update README.md"
+  },
+  {
+    "body": "",
+    "created_at": "2024-04-01T20:44:46+00:00",
+    "merged": true,
+    "pr_number": 1,
+    "repo": "code100x/what-bot",
+    "state": "merged",
+    "title": "Add swap endpoints"
+  },
+  {
+    "body": "",
+    "created_at": "2024-04-01T18:54:05+00:00",
+    "merged": true,
+    "pr_number": 308,
+    "repo": "code100x/cms",
+    "state": "merged",
+    "title": "UI fixes"
+  },
+  {
+    "body": "",
+    "created_at": "2024-03-31T14:11:14+00:00",
+    "merged": false,
+    "pr_number": 21,
+    "repo": "100xdevs-cohort-2/week-18-2-ci-cd",
+    "state": "open",
+    "title": "new PR"
+  },
+  {
+    "body": "",
+    "created_at": "2024-03-31T14:03:40+00:00",
+    "merged": false,
+    "pr_number": 7,
+    "repo": "100xdevs-cohort-2/week-18-2-ci-cd",
+    "state": "open",
+    "title": "commit"
+  },
+  {
+    "body": "",
+    "created_at": "2024-03-31T11:05:30+00:00",
+    "merged": false,
+    "pr_number": 2,
+    "repo": "100xdevs-cohort-2/week-18-2-final",
+    "state": "open",
+    "title": "Updated"
+  },
+  {
+    "body": "",
+    "created_at": "2024-03-31T11:03:36+00:00",
+    "merged": false,
+    "pr_number": 1,
+    "repo": "100xdevs-cohort-2/week-18-2-final",
+    "state": "open",
+    "title": "added change"
+  },
+  {
+    "body": "",
+    "created_at": "2024-02-07T16:29:31+00:00",
+    "merged": true,
+    "pr_number": 4,
+    "repo": "hiteshchoudhary/open-source-contribution",
+    "state": "merged",
+    "title": "Update readme.md"
+  },
+  {
+    "body": "Adds \r\n - The 100xdevs db support\r\n - No way to create new certs",
+    "created_at": "2023-11-14T07:56:17+00:00",
+    "merged": false,
+    "pr_number": 2,
+    "repo": "abhithory/auth-certficates",
+    "state": "closed",
+    "title": "added db"
+  },
+  {
+    "body": "",
+    "created_at": "2023-10-31T13:41:48+00:00",
+    "merged": false,
+    "pr_number": 1,
+    "repo": "hkirat/asyncapi-fork",
+    "state": "open",
+    "title": "Hkirat/changes"
+  },
+  {
+    "body": "",
+    "created_at": "2023-10-15T14:47:10+00:00",
+    "merged": false,
+    "pr_number": 12,
+    "repo": "100xDevs-hkirat/week-16-bp-repo",
+    "state": "open",
+    "title": "Added frontend changes"
+  },
+  {
+    "body": "",
+    "created_at": "2023-10-14T15:39:11+00:00",
+    "merged": false,
+    "pr_number": 5,
+    "repo": "100xDevs-hkirat/week-16-bp-repo",
+    "state": "open",
+    "title": "figure out issue"
+  },
+  {
+    "body": "",
+    "created_at": "2023-06-30T10:01:52+00:00",
+    "merged": true,
+    "pr_number": 4252,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "reverted secrets"
+  },
+  {
+    "body": "Needed for moving secrets",
+    "created_at": "2023-06-30T09:39:57+00:00",
+    "merged": true,
+    "pr_number": 4251,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Added more secrets to ws"
+  },
+  {
+    "body": "Adds full stop",
+    "created_at": "2023-06-14T09:41:38+00:00",
+    "merged": false,
+    "pr_number": 25,
+    "repo": "AntonOsika/gpt-engineer",
+    "state": "closed",
+    "title": "Update README.md"
+  },
+  {
+    "body": "Adds 3 new chat collections\r\n",
+    "created_at": "2023-06-02T10:21:43+00:00",
+    "merged": true,
+    "pr_number": 4115,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Added new collections"
+  },
+  {
+    "body": "",
+    "created_at": "2023-05-23T16:17:07+00:00",
+    "merged": true,
+    "pr_number": 4042,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Added feature gates for messaging"
+  },
+  {
+    "body": "",
+    "created_at": "2023-05-22T13:30:47+00:00",
+    "merged": true,
+    "pr_number": 4029,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Updates"
+  },
+  {
+    "body": "",
+    "created_at": "2023-05-12T08:05:57+00:00",
+    "merged": true,
+    "pr_number": 3948,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Added image validation"
+  },
+  {
+    "body": "Adds https://solscan.io/token/4wUE3tH2MTjNnxKQPYyx3owgL95ZYbYAtW1EsQPz9hfV",
+    "created_at": "2023-05-10T09:32:12+00:00",
+    "merged": true,
+    "pr_number": 3937,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Added new collection"
+  },
+  {
+    "body": "",
+    "created_at": "2023-05-03T05:55:01+00:00",
+    "merged": true,
+    "pr_number": 3886,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Added tensor api key"
+  },
+  {
+    "body": "Closes https://github.com/coral-xyz/backpack/issues/3873\r\nCloses https://github.com/coral-xyz/backpack/issues/3817",
+    "created_at": "2023-05-02T06:14:47+00:00",
+    "merged": true,
+    "pr_number": 3877,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Sticker polishes"
+  },
+  {
+    "body": "The PR adds on chain calls using @coral-xyz/bartering-sdk",
+    "created_at": "2023-05-02T06:00:16+00:00",
+    "merged": false,
+    "pr_number": 3875,
+    "repo": "coral-xyz/backpack",
+    "state": "closed",
+    "title": "Bartering on chain calls"
+  },
+  {
+    "body": "Enables nft stickers",
+    "created_at": "2023-04-26T15:05:08+00:00",
+    "merged": true,
+    "pr_number": 3801,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Enabled stickers"
+  },
+  {
+    "body": "",
+    "created_at": "2023-04-26T15:02:37+00:00",
+    "merged": true,
+    "pr_number": 3800,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Added alchemy key"
+  },
+  {
+    "body": "## What does this PR do?\r\n\r\nFixes https://github.com/calcom/cal.com/issues/8182\r\n\r\n**Environment**: Production\r\n\r\n## Type of change\r\n\r\nBug fix\r\nAdds validation to discord so that discord.com and discord.gg are both accepted\r\n\r\n## How should this be tested?\r\nMake sure you can add discord.com links in invitations\r\n\r\n![Screenshot 2023-04-26 at 4 46 13 PM](https://user-images.githubusercontent.com/8079861/234559193-6d79475b-3566-4116-b138-f59db602fe68.jpg)\r\n\r\n",
+    "created_at": "2023-04-26T11:16:51+00:00",
+    "merged": true,
+    "pr_number": 8536,
+    "repo": "calcom/cal.com",
+    "state": "merged",
+    "title": "Fixed discord validation"
+  },
+  {
+    "body": "Reverts coral-xyz/backpack#3706",
+    "created_at": "2023-04-25T07:02:40+00:00",
+    "merged": true,
+    "pr_number": 3780,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Revert \"Added back ownership check\""
+  },
+  {
+    "body": "",
+    "created_at": "2023-04-24T16:32:15+00:00",
+    "merged": true,
+    "pr_number": 3769,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Removed madlist from chat"
+  },
+  {
+    "body": "TODO: figure out where join button should reside",
+    "created_at": "2023-04-24T09:38:26+00:00",
+    "merged": false,
+    "pr_number": 3767,
+    "repo": "coral-xyz/backpack",
+    "state": "closed",
+    "title": "Adds skulls chat"
+  },
+  {
+    "body": "",
+    "created_at": "2023-04-22T15:27:16+00:00",
+    "merged": true,
+    "pr_number": 3760,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Turned on backpack all chat, removed message limit"
+  },
+  {
+    "body": "",
+    "created_at": "2023-04-21T10:51:24+00:00",
+    "merged": true,
+    "pr_number": 3754,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Adds profanity checker, length validator to chats"
+  },
+  {
+    "body": "Reverts coral-xyz/backpack#3749",
+    "created_at": "2023-04-20T23:22:19+00:00",
+    "merged": true,
+    "pr_number": 3751,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Revert \"Revert \"stop all chat for now\"\""
+  },
+  {
+    "body": "Reverts coral-xyz/backpack#3748",
+    "created_at": "2023-04-20T22:41:58+00:00",
+    "merged": true,
+    "pr_number": 3749,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Revert \"stop all chat for now\""
+  },
+  {
+    "body": "",
+    "created_at": "2023-04-20T22:40:34+00:00",
+    "merged": true,
+    "pr_number": 3748,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "stop all chat for now"
+  },
+  {
+    "body": "",
+    "created_at": "2023-04-19T23:59:02+00:00",
+    "merged": true,
+    "pr_number": 3737,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "new collection id"
+  },
+  {
+    "body": "",
+    "created_at": "2023-04-19T15:07:02+00:00",
+    "merged": true,
+    "pr_number": 3731,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Adds a new rpc url"
+  },
+  {
+    "body": "Added new ws env",
+    "created_at": "2023-04-18T18:38:35+00:00",
+    "merged": true,
+    "pr_number": 3720,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Updated ws to new env"
+  },
+  {
+    "body": "Added ownership check back to nft collection PUT endpoint",
+    "created_at": "2023-04-16T22:33:06+00:00",
+    "merged": true,
+    "pr_number": 3706,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Added back ownership check"
+  },
+  {
+    "body": "",
+    "created_at": "2023-04-12T01:26:39+00:00",
+    "merged": true,
+    "pr_number": 3677,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Fixed member count"
+  },
+  {
+    "body": "Closes https://github.com/coral-xyz/backpack/issues/3633",
+    "created_at": "2023-04-07T19:08:20+00:00",
+    "merged": true,
+    "pr_number": 3643,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Fixes Backpack all chat does not load on the user's first session."
+  },
+  {
+    "body": "Fixes sends, document not found error\r\nRelated https://github.com/coral-xyz/backpack/issues/3575",
+    "created_at": "2023-04-05T12:57:55+00:00",
+    "merged": true,
+    "pr_number": 3611,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Mobile messaging"
+  },
+  {
+    "body": "Related https://github.com/coral-xyz/backpack/issues/3575\r\n",
+    "created_at": "2023-04-05T11:11:23+00:00",
+    "merged": true,
+    "pr_number": 3610,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Mobile chat fixes"
+  },
+  {
+    "body": "",
+    "created_at": "2023-04-03T04:07:28+00:00",
+    "merged": true,
+    "pr_number": 3553,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Adds new madladsCollection remote toggle"
+  },
+  {
+    "body": "",
+    "created_at": "2023-04-03T02:36:51+00:00",
+    "merged": true,
+    "pr_number": 3551,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Dynamic chat post mint"
+  },
+  {
+    "body": "![Screenshot 2023-04-01 at 1 48 59 AM](https://user-images.githubusercontent.com/8079861/229221791-c1d057c2-07d3-4b0b-bdc9-3fd08de4b25b.jpg)\r\n\r\nHeader was using `ProxyImage` which uses swr-cache which is refreshed after 1 hour\r\nMade it use `LocalImage` instead",
+    "created_at": "2023-03-31T20:20:35+00:00",
+    "merged": true,
+    "pr_number": 3524,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Fixes #3507"
+  },
+  {
+    "body": "",
+    "created_at": "2023-03-30T20:36:50+00:00",
+    "merged": true,
+    "pr_number": 3509,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Added F1"
+  },
+  {
+    "body": "Needed on mobile since mobile doens't use cookies",
+    "created_at": "2023-03-27T02:19:05+00:00",
+    "merged": true,
+    "pr_number": 3452,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Adds jwt header to chat requests"
+  },
+  {
+    "body": "Reverts coral-xyz/backpack#3447",
+    "created_at": "2023-03-25T23:12:05+00:00",
+    "merged": true,
+    "pr_number": 3449,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Revert \"hkirat/revert yarn v3 temporarily\""
+  },
+  {
+    "body": "- Revert yarn v3\n- added back yarn lock\n",
+    "created_at": "2023-03-25T20:50:19+00:00",
+    "merged": true,
+    "pr_number": 3447,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "hkirat/revert yarn v3 temporarily"
+  },
+  {
+    "body": "PR exposes the hook useNavigateToChat which takes two inputs - \r\n1. collection id - collection id of the chat to join\r\n2. nft id - mint of the nft that gives the user access to the collection\r\n\r\n",
+    "created_at": "2023-03-20T20:57:44+00:00",
+    "merged": false,
+    "pr_number": 3422,
+    "repo": "coral-xyz/backpack",
+    "state": "closed",
+    "title": "Expose useNavigateToChat"
+  },
+  {
+    "body": "<img width=\"366\" alt=\"image (1)\" src=\"https://user-images.githubusercontent.com/8079861/226400381-9ba0d85f-ff65-400d-972c-cf403c5b9ccd.png\">\r\n",
+    "created_at": "2023-03-20T16:08:03+00:00",
+    "merged": true,
+    "pr_number": 3417,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Fix notifications"
+  },
+  {
+    "body": "",
+    "created_at": "2023-03-17T19:28:50+00:00",
+    "merged": true,
+    "pr_number": 3402,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "fixed spotlight on eth"
+  },
+  {
+    "body": "Related to https://github.com/coral-xyz/backpack/issues/3390\r\n",
+    "created_at": "2023-03-17T18:28:59+00:00",
+    "merged": true,
+    "pr_number": 3397,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Return primary key from server"
+  },
+  {
+    "body": "",
+    "created_at": "2023-03-17T18:16:07+00:00",
+    "merged": true,
+    "pr_number": 3396,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "More image optimisations"
+  },
+  {
+    "body": "PR asks for small images when small image is needed\r\nPR modifies the `skeleton loader` logic a little to fallback to original image after 1.5s. This is done because the `onLoad` event doesn't seem to fire sometimes on the image causing the loader to stay up indefinitely ",
+    "created_at": "2023-03-16T15:26:25+00:00",
+    "merged": true,
+    "pr_number": 3382,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Fix image loads"
+  },
+  {
+    "body": "",
+    "created_at": "2023-03-16T00:51:30+00:00",
+    "merged": true,
+    "pr_number": 3373,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Fix secure send"
+  },
+  {
+    "body": "- Fixed metadata\n- added laziness\n",
+    "created_at": "2023-03-15T23:30:40+00:00",
+    "merged": true,
+    "pr_number": 3371,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Optimise images"
+  },
+  {
+    "body": "",
+    "created_at": "2023-03-14T16:10:38+00:00",
+    "merged": true,
+    "pr_number": 3352,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Adds user to admins"
+  },
+  {
+    "body": "![Screenshot 2023-03-13 at 9 34 20 PM](https://user-images.githubusercontent.com/8079861/224886852-996586bd-9cad-43b6-9499-78fa2e818663.jpg)\r\n![Screenshot 2023-03-13 at 9 33 59 PM](https://user-images.githubusercontent.com/8079861/224886859-5df20eb7-9640-47cb-93a1-3853526a46c4.jpg)\r\n![Screenshot 2023-03-13 at 9 33 55 PM](https://user-images.githubusercontent.com/8079861/224886860-3689b07c-9a0a-4bdd-aca1-fa5eafc2d443.jpg)\r\n",
+    "created_at": "2023-03-14T03:36:53+00:00",
+    "merged": true,
+    "pr_number": 3344,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Fixed nft sends"
+  },
+  {
+    "body": "The PR \r\n\r\n1. Moves a bunch of components from `react-common` to `tamagui` so they can be used across app-extension and mobile\r\n2. Makes indexed db work on mobile\r\n3. Creates a simple component that renders all messages, lets you select a message room and chat inside it.\r\nMore context in video\r\n\r\nhttps://user-images.githubusercontent.com/8079861/224817607-0e9e4b08-765d-4477-8bab-10106c048f03.mp4\r\n\r\n",
+    "created_at": "2023-03-13T16:29:51+00:00",
+    "merged": true,
+    "pr_number": 3330,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Mobile messaging base, adds indexed db to mobile"
+  },
+  {
+    "body": "Closes https://github.com/coral-xyz/backpack/issues/3317",
+    "created_at": "2023-03-12T21:11:21+00:00",
+    "merged": true,
+    "pr_number": 3319,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Fixes Notification subscriptiobn"
+  },
+  {
+    "body": "- Added sentry\n- Updated newrelic\n",
+    "created_at": "2023-03-12T18:25:42+00:00",
+    "merged": true,
+    "pr_number": 3312,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Adds sentry to env variables"
+  },
+  {
+    "body": "",
+    "created_at": "2023-03-12T15:03:23+00:00",
+    "merged": true,
+    "pr_number": 3310,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Revert rate limitting"
+  },
+  {
+    "body": "- newrelic on notifications worker\n- Updated tag\n",
+    "created_at": "2023-03-11T23:10:05+00:00",
+    "merged": true,
+    "pr_number": 3306,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Adds newrelic to notification worker"
+  },
+  {
+    "body": "",
+    "created_at": "2023-03-11T22:33:40+00:00",
+    "merged": true,
+    "pr_number": 3304,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Adds newrelic to notifications worker"
+  },
+  {
+    "body": "",
+    "created_at": "2023-03-11T21:56:21+00:00",
+    "merged": true,
+    "pr_number": 3303,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "FIx xnft-api-server workflow"
+  },
+  {
+    "body": "",
+    "created_at": "2023-03-11T21:51:15+00:00",
+    "merged": true,
+    "pr_number": 3302,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Fix workflows "
+  },
+  {
+    "body": "",
+    "created_at": "2023-03-11T21:46:35+00:00",
+    "merged": true,
+    "pr_number": 3301,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Fixes workflow"
+  },
+  {
+    "body": "",
+    "created_at": "2023-03-11T21:42:38+00:00",
+    "merged": true,
+    "pr_number": 3300,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Fix workflow"
+  },
+  {
+    "body": "",
+    "created_at": "2023-03-11T21:39:11+00:00",
+    "merged": true,
+    "pr_number": 3299,
+    "repo": "coral-xyz/backpack",
+    "state": "merged",
+    "title": "Optimise query"
+  }
+]
