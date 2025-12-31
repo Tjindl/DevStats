@@ -98,9 +98,6 @@ class scoring_service:
         lines_removed: int = 0,
         files_changed: int = 0,
         commits: int = 0,
-        tests_added: int = 0,
-        review_comments: int = 0,
-        approvals: int = 0,
         merge_time_days: float = 0.0,
         *,
         weights: dict[str, float] | None = None
@@ -111,21 +108,15 @@ class scoring_service:
         lr = max(0, int(lines_removed))
         fc = max(0, int(files_changed))
         cm = max(0, int(commits))
-        ta = max(0, int(tests_added))
-        rc = max(0, int(review_comments))
-        ap = max(0, int(approvals))
         md = max(0.0, float(merge_time_days))
 
         if weights is None:
             weights = {
-                'lines_added': 0.18,
-                'lines_removed': 0.06,
-                'files_changed': 0.16,
-                'commits': 0.14,
-                'tests': 0.12,
-                'review_comments': 0.08,
-                'approvals': 0.12,
-                'merge_speed': 0.14,
+                'lines_added': 0.25,
+                'lines_removed': 0.10,
+                'files_changed': 0.20,
+                'commits': 0.20,
+                'merge_speed': 0.25,
             }
 
         # normalization caps (tunable)
@@ -133,10 +124,6 @@ class scoring_service:
         removed_score = min(lr / 100.0, 1.0)
         files_score = min(fc / 10.0, 1.0)
         commits_score = min(cm / 5.0, 1.0)
-        tests_score = min(ta / 20.0, 1.0)
-        # fewer review comments generally better; treat as inverse up to cap
-        review_score = 1.0 - min(rc / 10.0, 1.0)
-        approvals_score = min(ap / 3.0, 1.0)
         merge_speed_score = 1.0 - min(md / 7.0, 1.0)
 
         total = (
@@ -144,9 +131,6 @@ class scoring_service:
             + removed_score * weights.get('lines_removed', 0.0)
             + files_score * weights.get('files_changed', 0.0)
             + commits_score * weights.get('commits', 0.0)
-            + tests_score * weights.get('tests', 0.0)
-            + review_score * weights.get('review_comments', 0.0)
-            + approvals_score * weights.get('approvals', 0.0)
             + merge_speed_score * weights.get('merge_speed', 0.0)
         )
 
@@ -176,9 +160,6 @@ class scoring_service:
                 lines_removed=pr.get('lines_removed', 0),
                 files_changed=pr.get('files_changed', 0),
                 commits=pr.get('commits', 0),
-                tests_added=pr.get('tests_added', 0),
-                review_comments=pr.get('review_comments', 0),
-                approvals=pr.get('approvals', 0),
                 merge_time_days=pr.get('merge_time_days', 0.0),
                 weights=per_pr_weights,
             )
